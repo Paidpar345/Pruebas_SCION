@@ -1,0 +1,18 @@
+{
+  "isd_as": "2-250",
+  "mtu": 1472,
+  "attributes": [],
+  "border_routers": {
+    "br2-250-1": {
+      "internal_addr": "172.20.2.50:30042",
+      "interfaces": {
+        "1": {
+          "underlay": { "public": "172.20.2.50:50001", "remote": "172.20.2.20:50002" },
+          "isd_as": "2-220", "link_to": "parent", "mtu": 1472
+        }
+      }
+    }
+  },
+  "control_service":  { "cs2-250-1": { "addr": "172.20.2.50:30252" } },
+  "discovery_service": { "ds2-250-1": { "addr": "172.20.2.50:30252" } }
+}

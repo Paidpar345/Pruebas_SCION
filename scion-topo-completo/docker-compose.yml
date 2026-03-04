@@ -1,0 +1,559 @@
+services:
+  isd1-as110:
+    build: .
+    container_name: isd1-as110
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.10
+    volumes:
+      - ./topo/isd1-as110:/scion/config:ro
+      - scion_data_110:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+
+  isd1-as120:
+    build: .
+    container_name: isd1-as120
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.20
+    volumes:
+      - ./topo/isd1-as120:/scion/config:ro
+      - scion_data_120:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd1-as110:
+        condition: service_healthy
+
+  isd1-as130:
+    build: .
+    container_name: isd1-as130
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.30
+    volumes:
+      - ./topo/isd1-as130:/scion/config:ro
+      - scion_data_130:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd1-as110:
+        condition: service_healthy
+
+  isd1-as140:
+    build: .
+    container_name: isd1-as140
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.40
+    volumes:
+      - ./topo/isd1-as140:/scion/config:ro
+      - scion_data_140:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd1-as110:
+        condition: service_healthy
+
+  isd1-as150:
+    build: .
+    container_name: isd1-as150
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.50
+    volumes:
+      - ./topo/isd1-as150:/scion/config:ro
+      - scion_data_150:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd1-as120:
+        condition: service_healthy
+
+  isd2-as210:
+    build: .
+    container_name: isd2-as210
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.10
+    volumes:
+      - ./topo/isd2-as210:/scion/config:ro
+      - scion_data_210:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd1-as110:
+        condition: service_healthy
+
+  isd2-as220:
+    build: .
+    container_name: isd2-as220
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.20
+    volumes:
+      - ./topo/isd2-as220:/scion/config:ro
+      - scion_data_220:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd2-as210:
+        condition: service_healthy
+
+  isd2-as230:
+    build: .
+    container_name: isd2-as230
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.30
+    volumes:
+      - ./topo/isd2-as230:/scion/config:ro
+      - scion_data_230:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd2-as210:
+        condition: service_healthy
+
+  isd2-as240:
+    build: .
+    container_name: isd2-as240
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.40
+    volumes:
+      - ./topo/isd2-as240:/scion/config:ro
+      - scion_data_240:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd2-as210:
+        condition: service_healthy
+
+  isd2-as250:
+    build: .
+    container_name: isd2-as250
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.50
+    volumes:
+      - ./topo/isd2-as250:/scion/config:ro
+      - scion_data_250:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd2-as220:
+        condition: service_healthy
+
+  isd3-as310:
+    build: .
+    container_name: isd3-as310
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.10
+    volumes:
+      - ./topo/isd3-as310:/scion/config:ro
+      - scion_data_310:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd2-as220:
+        condition: service_healthy
+
+  isd3-as320:
+    build: .
+    container_name: isd3-as320
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.20
+    volumes:
+      - ./topo/isd3-as320:/scion/config:ro
+      - scion_data_320:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd3-as310:
+        condition: service_healthy
+
+  isd3-as330:
+    build: .
+    container_name: isd3-as330
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.30
+    volumes:
+      - ./topo/isd3-as330:/scion/config:ro
+      - scion_data_330:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd3-as310:
+        condition: service_healthy
+
+  isd3-as340:
+    build: .
+    container_name: isd3-as340
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.40
+    volumes:
+      - ./topo/isd3-as340:/scion/config:ro
+      - scion_data_340:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd3-as310:
+        condition: service_healthy
+
+  isd3-as350:
+    build: .
+    container_name: isd3-as350
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.50
+    volumes:
+      - ./topo/isd3-as350:/scion/config:ro
+      - scion_data_350:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd3-as320:
+        condition: service_healthy
+
+  isd4-as410:
+    build: .
+    container_name: isd4-as410
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.10
+    volumes:
+      - ./topo/isd4-as410:/scion/config:ro
+      - scion_data_410:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd3-as320:
+        condition: service_healthy
+
+  isd4-as420:
+    build: .
+    container_name: isd4-as420
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.20
+    volumes:
+      - ./topo/isd4-as420:/scion/config:ro
+      - scion_data_420:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd4-as410:
+        condition: service_healthy
+
+  isd4-as430:
+    build: .
+    container_name: isd4-as430
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.30
+    volumes:
+      - ./topo/isd4-as430:/scion/config:ro
+      - scion_data_430:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd4-as410:
+        condition: service_healthy
+
+  isd4-as440:
+    build: .
+    container_name: isd4-as440
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.40
+    volumes:
+      - ./topo/isd4-as440:/scion/config:ro
+      - scion_data_440:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd4-as410:
+        condition: service_healthy
+
+  isd4-as450:
+    build: .
+    container_name: isd4-as450
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.50
+    volumes:
+      - ./topo/isd4-as450:/scion/config:ro
+      - scion_data_450:/var/lib/scion
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x scion-daemon > /dev/null && pgrep -x scion-router > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 15
+      start_period: 45s
+    depends_on:
+      isd4-as420:
+        condition: service_healthy
+
+  host1-isd1:
+    build: .
+    container_name: host1-isd1
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.101
+    volumes:
+      - ./topo/host1-isd1:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd1-as110:
+        condition: service_healthy
+
+  host2-isd1:
+    build: .
+    container_name: host2-isd1
+    networks:
+      scion_net:
+        ipv4_address: 172.20.1.102
+    volumes:
+      - ./topo/host2-isd1:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd1-as130:
+        condition: service_healthy
+
+  host1-isd2:
+    build: .
+    container_name: host1-isd2
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.101
+    volumes:
+      - ./topo/host1-isd2:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd2-as210:
+        condition: service_healthy
+
+  host2-isd2:
+    build: .
+    container_name: host2-isd2
+    networks:
+      scion_net:
+        ipv4_address: 172.20.2.102
+    volumes:
+      - ./topo/host2-isd2:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd2-as230:
+        condition: service_healthy
+
+  host1-isd3:
+    build: .
+    container_name: host1-isd3
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.101
+    volumes:
+      - ./topo/host1-isd3:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd3-as310:
+        condition: service_healthy
+
+  host2-isd3:
+    build: .
+    container_name: host2-isd3
+    networks:
+      scion_net:
+        ipv4_address: 172.20.3.102
+    volumes:
+      - ./topo/host2-isd3:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd3-as330:
+        condition: service_healthy
+
+  host1-isd4:
+    build: .
+    container_name: host1-isd4
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.101
+    volumes:
+      - ./topo/host1-isd4:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd4-as410:
+        condition: service_healthy
+
+  host2-isd4:
+    build: .
+    container_name: host2-isd4
+    networks:
+      scion_net:
+        ipv4_address: 172.20.4.102
+    volumes:
+      - ./topo/host2-isd4:/scion/config:ro
+    cap_add: [NET_BIND_SERVICE]
+    restart: unless-stopped
+    depends_on:
+      isd4-as430:
+        condition: service_healthy
+
+networks:
+  scion_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
+
+volumes:
+  scion_data_110:
+  scion_data_120:
+  scion_data_130:
+  scion_data_140:
+  scion_data_150:
+  scion_data_210:
+  scion_data_220:
+  scion_data_230:
+  scion_data_240:
+  scion_data_250:
+  scion_data_310:
+  scion_data_320:
+  scion_data_330:
+  scion_data_340:
+  scion_data_350:
+  scion_data_410:
+  scion_data_420:
+  scion_data_430:
+  scion_data_440:
+  scion_data_450:

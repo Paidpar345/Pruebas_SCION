@@ -1,0 +1,16 @@
+{
+  "isd_as": "4-410", "mtu": 1472, "attributes": ["core", "authoritative", "voting"],
+  "border_routers": {
+    "br4-410-1": {
+      "internal_addr": "172.20.4.10:30042",
+      "interfaces": {
+        "1": { "underlay": { "public": "172.20.4.10:50001", "remote": "172.20.4.20:50001" }, "isd_as": "4-420", "link_to": "core", "mtu": 1472 },
+        "2": { "underlay": { "public": "172.20.4.10:50002", "remote": "172.20.4.30:50001" }, "isd_as": "4-430", "link_to": "child", "mtu": 1472 },
+        "3": { "underlay": { "public": "172.20.4.10:50003", "remote": "172.20.4.40:50001" }, "isd_as": "4-440", "link_to": "child", "mtu": 1472 },
+        "4": { "underlay": { "public": "172.20.4.10:50004", "remote": "172.20.3.20:50003" }, "isd_as": "3-320", "link_to": "core", "mtu": 1472 }
+      }
+    }
+  },
+  "control_service":  { "cs4-410-1": { "addr": "172.20.4.10:30252" } },
+  "discovery_service": { "ds4-410-1": { "addr": "172.20.4.10:30252" } }
+}

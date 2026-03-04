@@ -1,0 +1,11 @@
+isd_as = "4-420"
+mode   = "as"
+
+[ca.service]
+mode          = "delegating"
+shared_secret = "secrets/secret-420.txt"
+addr          = "http://172.20.4.10:3000"
+client_id     = "420"
+
+[metrics]
+server = "0.0.0.0:33400"

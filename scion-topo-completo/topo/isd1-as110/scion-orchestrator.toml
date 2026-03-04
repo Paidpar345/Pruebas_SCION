@@ -1,0 +1,16 @@
+isd_as = "1-110"
+mode   = "as"
+
+[ca]
+server  = "0.0.0.0:3000"
+# Lista de clientes (resto de ASes del ISD) con sus respectivos secretos
+clients = ["120:secrets/secret-120.txt",
+           "130:secrets/secret-130.txt",
+           "140:secrets/secret-140.txt",
+           "150:secrets/secret-150.txt"]
+
+[metrics]
+server = "0.0.0.0:33400"
+
+[bootstrap]
+# El servidor bootstrap se activa implícitamente en el puerto 8041

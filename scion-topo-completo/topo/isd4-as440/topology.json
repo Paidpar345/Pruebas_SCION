@@ -1,0 +1,18 @@
+{
+  "isd_as": "4-440",
+  "mtu": 1472,
+  "attributes": [],
+  "border_routers": {
+    "br4-440-1": {
+      "internal_addr": "172.20.4.40:30042",
+      "interfaces": {
+        "1": {
+          "underlay": { "public": "172.20.4.40:50001", "remote": "172.20.4.10:50003" },
+          "isd_as": "4-410", "link_to": "parent", "mtu": 1472
+        }
+      }
+    }
+  },
+  "control_service":  { "cs4-440-1": { "addr": "172.20.4.40:30252" } },
+  "discovery_service": { "ds4-440-1": { "addr": "172.20.4.40:30252" } }
+}

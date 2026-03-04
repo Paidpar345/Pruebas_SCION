@@ -1,0 +1,15 @@
+{
+  "isd_as": "3-320", "mtu": 1472, "attributes": ["core", "authoritative"],
+  "border_routers": {
+    "br3-320-1": {
+      "internal_addr": "172.20.3.20:30042",
+      "interfaces": {
+        "1": { "underlay": { "public": "172.20.3.20:50001", "remote": "172.20.3.10:50001" }, "isd_as": "3-310", "link_to": "core", "mtu": 1472 },
+        "2": { "underlay": { "public": "172.20.3.20:50002", "remote": "172.20.3.50:50001" }, "isd_as": "3-350", "link_to": "child", "mtu": 1472 },
+        "3": { "underlay": { "public": "172.20.3.20:50003", "remote": "172.20.4.10:50004" }, "isd_as": "4-410", "link_to": "core", "mtu": 1472 }
+      }
+    }
+  },
+  "control_service":  { "cs3-320-1": { "addr": "172.20.3.20:30252" } },
+  "discovery_service": { "ds3-320-1": { "addr": "172.20.3.20:30252" } }
+}

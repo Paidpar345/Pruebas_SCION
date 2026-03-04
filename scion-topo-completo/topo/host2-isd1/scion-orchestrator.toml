@@ -1,0 +1,8 @@
+isd_as = "1-110"
+mode   = "endhost"
+
+[bootstrap]
+server = "172.20.1.10:8041"
+
+[metrics]
+server = "0.0.0.0:33400"
