@@ -24,5 +24,4 @@ RUN mkdir -p /scion/bin /scion/config /var/lib/scion /var/log/scion && \
 
 WORKDIR /scion
 
-# "run" es argumento posicional + "-c" es el flag de config
 ENTRYPOINT ["scion-orchestrator", "run", "-c", "/scion/config/scion-orchestrator.toml"]
