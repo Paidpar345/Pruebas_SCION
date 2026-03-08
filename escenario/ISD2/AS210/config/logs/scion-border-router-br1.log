@@ -1,0 +1,260 @@
+2026-03-08 22:08:44.298979+0000	INFO	             env/logging.go:42	=====================> Service started SCION Router br-1
+  Scion version: 
+
+  pid:           33
+  euid/egid:     0 0
+  cmd line:      ["bin/router" "--config" "/root/escenario/ISD2/AS210/config/tmp/br1-tmp.toml"]
+
+2026-03-08 22:08:44.340164+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "authoritative"}
+2026-03-08 22:08:44.340222+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "issuing"}
+2026-03-08 22:08:44.340234+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "voting"}
+2026-03-08 22:08:44.349082+0000	DEBUG	          control/iactx.go:111	Configuring Dataplane
+2026-03-08 22:08:44.349132+0000	DEBUG	        router/connector.go:54	CreateIACtx	{"isd_as": "2-210"}
+2026-03-08 22:08:44.460933+0000	DEBUG	       router/connector.go:169	Setting key	{"isd_as": "2-210", "index": 0}
+2026-03-08 22:08:44.461007+0000	DEBUG	        router/connector.go:66	Adding internal interface	{"isd_as": "2-210", "local": "10.0.2.10:30001"}
+2026-03-08 22:08:44.461079+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "1", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50001", "remote_isd_as": "1-110", "remote_addr": "10.0.1.10:50001", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461168+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "2", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50007", "remote_isd_as": "1-111", "remote_addr": "10.0.1.11:50007", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461215+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "3", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50013", "remote_isd_as": "2-211", "remote_addr": "10.0.2.11:50013", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461279+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "4", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50014", "remote_isd_as": "3-310", "remote_addr": "10.0.3.10:50014", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461330+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "5", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50015", "remote_isd_as": "3-311", "remote_addr": "10.0.3.11:50015", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461367+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "6", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50016", "remote_isd_as": "4-410", "remote_addr": "10.0.4.10:50016", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461441+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "7", "local_isd_as": "2-210", "local_addr": "10.0.2.10:50017", "remote_isd_as": "4-411", "remote_addr": "10.0.4.11:50017", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461489+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "8", "local_isd_as": "2-210", "local_addr": "10.0.2.10:51200", "remote_isd_as": "2-212", "remote_addr": "10.0.2.12:51200", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.461534+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "9", "local_isd_as": "2-210", "local_addr": "10.0.2.10:51210", "remote_isd_as": "2-213", "remote_addr": "10.0.2.13:51210", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.490782+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "10", "local_isd_as": "2-210", "local_addr": "10.0.2.10:51220", "remote_isd_as": "2-214", "remote_addr": "10.0.2.14:51220", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:44.499366+0000	DEBUG	       router/connector.go:147	Adding service	{"isd_as": "2-210", "svc": "DS", "address": "10.0.2.10:30254"}
+2026-03-08 22:08:44.499448+0000	DEBUG	       router/connector.go:147	Adding service	{"isd_as": "2-210", "svc": "CS", "address": "10.0.2.10:30254"}
+2026-03-08 22:08:44.499472+0000	DEBUG	       router/connector.go:245	Endhost port range configuration	{"startPort": 30000, "endPort": 32767}
+2026-03-08 22:08:44.499486+0000	DEBUG	          control/iactx.go:119	Dataplane configured successfully	{"config": "{IA: 2-210, BR.Name: br-1"}
+2026-03-08 22:08:44.502546+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30401"}
+2026-03-08 22:08:44.717997+0000	DEBUG	       router/dataplane.go:678	Initialize packet pool of size	{"poolSize": 12675}
+2026-03-08 22:08:44.791070+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 9}
+2026-03-08 22:08:44.791187+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 1}
+2026-03-08 22:08:44.791291+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 1}
+2026-03-08 22:08:44.791293+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 0}
+2026-03-08 22:08:44.791350+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 6}
+2026-03-08 22:08:44.791367+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 10}
+2026-03-08 22:08:44.791333+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 7}
+2026-03-08 22:08:44.791434+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 7}
+2026-03-08 22:08:44.791478+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 9}
+2026-03-08 22:08:44.792447+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 10}
+2026-03-08 22:08:44.792509+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 0}
+2026-03-08 22:08:44.792728+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 6}
+2026-03-08 22:08:44.792898+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 2}
+2026-03-08 22:08:44.792939+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 2}
+2026-03-08 22:08:44.793056+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 3}
+2026-03-08 22:08:44.793633+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 3}
+2026-03-08 22:08:44.794883+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 4}
+2026-03-08 22:08:44.814115+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 4}
+2026-03-08 22:08:44.815428+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 5}
+2026-03-08 22:08:44.815592+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 8}
+2026-03-08 22:08:44.815797+0000	DEBUG	       router/dataplane.go:815	Initialize processor with	{"id": 0}
+2026-03-08 22:08:44.815855+0000	DEBUG	       router/dataplane.go:815	Initialize processor with	{"id": 1}
+2026-03-08 22:08:44.815873+0000	DEBUG	       router/dataplane.go:872	Initialize slow-path processor with	{"id": 0}
+2026-03-08 22:08:44.815895+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 5}
+2026-03-08 22:08:44.815937+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 8}
+2026-03-08 22:08:44.880113+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:44.880185+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:45.107060+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:45.107288+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:45.238268+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:08:45.296181+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:45.296237+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:45.301707+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:45.302919+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:45.373422+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 7, "err": "read udp 10.0.2.10:50017: recvmmsg: connection refused"}
+2026-03-08 22:08:45.377679+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:08:45.379058+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 5, "err": "read udp 10.0.2.10:50015: recvmmsg: connection refused"}
+2026-03-08 22:08:45.379545+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 8, "err": "read udp 10.0.2.10:51200: recvmmsg: connection refused"}
+2026-03-08 22:08:45.389901+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:08:45.390113+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:08:45.426375+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 7, "err": "read udp 10.0.2.10:50017: recvmmsg: connection refused"}
+2026-03-08 22:08:45.426522+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 5, "err": "read udp 10.0.2.10:50015: recvmmsg: connection refused"}
+2026-03-08 22:08:45.464800+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:08:45.464904+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:08:45.562247+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:08:45.661220+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:08:45.726190+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:08:45.831636+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 5, "err": "read udp 10.0.2.10:50015: recvmmsg: connection refused"}
+2026-03-08 22:08:45.831694+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 7, "err": "read udp 10.0.2.10:50017: recvmmsg: connection refused"}
+2026-03-08 22:08:45.842878+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 8, "err": "read udp 10.0.2.10:51200: recvmmsg: connection refused"}
+2026-03-08 22:08:45.845013+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:08:46.712406+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:46.713955+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 7, "err": "read udp 10.0.2.10:50017: recvmmsg: connection refused"}
+2026-03-08 22:08:46.765494+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:46.817802+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:08:46.909614+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:46.910902+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:08:46.994914+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:46.996759+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:08:47.513639+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 7, "err": "read udp 10.0.2.10:50017: recvmmsg: connection refused"}
+2026-03-08 22:08:47.824301+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:47.825146+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:08:48.644194+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:48.685756+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:08:48.826772+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:48.826815+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:08:49.572468+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:49.859009+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:49.859238+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:08:50.556157+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:50.728280+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:08:51.026194+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 3, "err": "read udp 10.0.2.10:50013: recvmmsg: connection refused"}
+2026-03-08 22:08:51.191619+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 3, "err": "read udp 10.0.2.10:50013: recvmmsg: connection refused"}
+2026-03-08 22:08:51.973584+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:51.973647+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:08:52.105428+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 3, "err": "read udp 10.0.2.10:50013: recvmmsg: connection refused"}
+2026-03-08 22:08:53.078379+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 3, "err": "read udp 10.0.2.10:50013: recvmmsg: connection refused"}
+2026-03-08 22:08:53.951555+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 3, "err": "read udp 10.0.2.10:50013: recvmmsg: connection refused"}
+2026-03-08 22:08:55.099170+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:55.099228+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 22:09:03.128188+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.157866+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.166610+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.304857+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.316961+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 22:09:03.345894+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 22:09:03.317089+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:09:03.349495+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.384742+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 22:09:03.482592+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 22:09:03.499624+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:09:03.511401+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 22:09:03.512526+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 22:09:03.541743+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 22:09:03.656140+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:03.656617+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:03.666967+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 22:09:03.714379+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:09:03.719582+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 1, "err": "read udp 10.0.2.10:50001: recvmmsg: connection refused"}
+2026-03-08 22:09:03.790887+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:03.790977+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:03.791072+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:03.791098+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:03.800848+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 22:09:03.906716+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 10, "err": "read udp 10.0.2.10:51220: recvmmsg: connection refused"}
+2026-03-08 22:09:04.010675+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.010748+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.010772+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.010929+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.104174+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 22:09:04.240186+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.240249+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.240810+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.241719+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.266997+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.267081+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:09:04.267109+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.267131+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:09:04.281499+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 8, "err": "read udp 10.0.2.10:51200: recvmmsg: connection refused"}
+wn"}
+2026-03-08 20:57:35.032552+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.032559+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.057930+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Down
+2026-03-08 20:57:35.064679+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.064719+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.064725+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.064736+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.064747+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.064753+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.076249+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:57:35.097194+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Down
+2026-03-08 20:57:35.110216+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 20:57:35.112138+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 20:57:35.121186+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 20:57:35.183376+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:57:35.185606+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.185634+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.185647+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.185658+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.218625+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.218676+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.220837+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.220863+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.220876+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.220940+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.231761+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.231787+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.231948+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.231985+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.276720+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 20:57:35.293139+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.293172+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:35.293186+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.293198+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:35.306653+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Up on event Init
+2026-03-08 20:57:35.306708+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:57:35.343185+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:57:35.397286+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:57:35.575522+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:57:51.818543+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:57:51.819867+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:57:51.866781+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:57:51.873045+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:57:51.885917+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:57:51.892413+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:57:51.903795+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:57:51.924244+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:57:52.373086+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:57:52.496148+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:58:56.168209+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:58:56.168355+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:58:56.224840+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:58:56.224906+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 20:58:56.343253+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:58:56.343313+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:58:56.343322+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:58:56.343871+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 20:58:56.366447+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:58:56.366590+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.366627+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.367589+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.367642+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.440801+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.440844+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.440862+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.440868+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.440886+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:58:56.441150+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.441174+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.441182+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.441187+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.471561+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:58:56.494771+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 20:58:56.670345+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.670397+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.670403+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.670407+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 20:58:56.670420+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.670432+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.670437+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.670442+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 20:58:56.761711+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:58:56.816682+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:58:56.842598+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 20:58:56.846459+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 21:01:05.076770+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 21:01:05.265304+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 21:01:05.271743+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 21:01:05.417683+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 21:01:05.430901+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 21:01:05.498741+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 21:01:05.511589+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 21:01:05.546313+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.546386+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.546429+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.546678+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.642366+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 6, "err": "read udp 10.0.2.10:50016: recvmmsg: connection refused"}
+2026-03-08 21:01:05.642423+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 9, "err": "read udp 10.0.2.10:51210: recvmmsg: connection refused"}
+2026-03-08 21:01:05.697779+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.697824+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.700115+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.701524+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.701417+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.732093+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.732277+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.732760+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.789471+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.789508+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 21:01:05.789522+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 21:01:05.789533+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}

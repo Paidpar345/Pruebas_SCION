@@ -1,0 +1,41 @@
+{
+  "attributes": [],
+  "isd_as": "3-312",
+  "mtu": 1500,
+  "control_service": {
+    "cs-1": {
+      "addr": "10.0.3.12:30254"
+    }
+  },
+  "discovery_service": {
+    "cs-1": {
+      "addr": "10.0.3.12:30254"
+    }
+  },
+  "border_routers": {
+    "br-1": {
+      "internal_addr": "10.0.3.12:30001",
+      "interfaces": {
+        "1": {
+          "underlay": {
+            "public": "10.0.3.12:51300",
+            "remote": "10.0.3.10:51300"
+          },
+          "isd_as": "3-310",
+          "link_to": "PARENT",
+          "mtu": 1500
+        },
+        "2": {
+          "underlay": {
+            "public": "10.0.3.12:51301",
+            "remote": "10.0.3.11:51301"
+          },
+          "isd_as": "3-311",
+          "link_to": "PARENT",
+          "mtu": 1500
+        }
+      }
+    }
+  },
+  "dispatched_ports": "30000-32767"
+}

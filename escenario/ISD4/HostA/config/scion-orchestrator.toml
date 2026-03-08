@@ -1,0 +1,10 @@
+command = "service"
+isd_as = "4-410"
+mode = "endhost"
+
+[metrics]
+server = "127.0.0.1:33401"
+
+[bootstrap]
+server = "10.0.4.10:8041"
+# allowedSubnets = [""] # TODO: Rethink this

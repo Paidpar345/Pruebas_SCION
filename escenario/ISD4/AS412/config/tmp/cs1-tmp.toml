@@ -1,0 +1,25 @@
+[beacon_db]
+connection = "/root/escenario/ISD4/AS412/config/database/cs-1.beacon.db"
+
+[beaconing]
+origination_interval = "5s"
+propagation_interval = "5s"
+
+[general]
+id = "cs-1"
+config_dir = "/root/escenario/ISD4/AS412/config/"
+
+[metrics]
+prometheus = "127.0.0.1:30454"
+
+[path_db]
+connection = "/root/escenario/ISD4/AS412/config/database/cs-1.path.db"
+
+[trust_db]
+connection = "/root/escenario/ISD4/AS412/config/database/cs-1.trust.db"
+
+[log.console]
+level = "debug"
+
+[api]
+addr = "10.0.4.12:30554"

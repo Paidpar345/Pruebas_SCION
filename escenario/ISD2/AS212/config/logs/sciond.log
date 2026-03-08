@@ -1,0 +1,17 @@
+2026-03-08 22:08:46.070524+0000	INFO	             env/logging.go:42	=====================> Service started SCION Daemon sd
+  Scion version: 
+
+  pid:           35
+  euid/egid:     0 0
+  cmd line:      ["bin/daemon" "--config" "/root/escenario/ISD2/AS212/config/tmp/sciond-tmp.toml"]
+
+2026-03-08 22:08:46.073880+0000	INFO	        storage/storage.go:201	Connecting PathDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/AS212/config/database/sd.path.db"}
+2026-03-08 22:08:46.191410+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "147fb09b", "task": "control_pathstorage_cleaner_cleaner"}
+2026-03-08 22:08:46.192643+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "7e306de2", "task": "sd_segments_cleaner"}
+2026-03-08 22:08:46.192703+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "975476a7", "task": "sd_revocation_cleaner"}
+2026-03-08 22:08:46.192731+0000	INFO	        storage/storage.go:244	Connecting TrustDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/AS212/config/database/sd.trust.db"}
+2026-03-08 22:08:46.320676+0000	INFO	           daemon/daemon.go:67	TRCs loaded	{"files": []}
+2026-03-08 22:08:46.321015+0000	DEBUG	           daemon/daemon.go:70	Ignoring existing TRC	{"file": "/root/escenario/ISD2/AS212/config/certs/ISD2-B1-S1.trc"}
+2026-03-08 22:08:46.321337+0000	INFO	           daemon/daemon.go:81	Certificate chains loaded	{"files": []}
+2026-03-08 22:08:46.321983+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "7a644c96", "task": "daemon_trc_loader"}
+2026-03-08 22:08:46.325717+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30455"}

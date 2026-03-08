@@ -1,0 +1,41 @@
+2026-03-08 22:08:54.621995+0000	INFO	             env/logging.go:42	=====================> Service started SCION Router br-1
+  Scion version: 
+
+  pid:           35
+  euid/egid:     0 0
+  cmd line:      ["bin/router" "--config" "/root/escenario/ISD1/AS112/config/tmp/br1-tmp.toml"]
+
+2026-03-08 22:08:54.628625+0000	DEBUG	          control/iactx.go:111	Configuring Dataplane
+2026-03-08 22:08:54.628668+0000	DEBUG	        router/connector.go:54	CreateIACtx	{"isd_as": "1-112"}
+2026-03-08 22:08:54.641413+0000	DEBUG	       router/connector.go:169	Setting key	{"isd_as": "1-112", "index": 0}
+2026-03-08 22:08:54.663946+0000	DEBUG	        router/connector.go:66	Adding internal interface	{"isd_as": "1-112", "local": "10.0.1.12:30001"}
+2026-03-08 22:08:54.664063+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "1", "local_isd_as": "1-112", "local_addr": "10.0.1.12:51100", "remote_isd_as": "1-110", "remote_addr": "10.0.1.10:51100", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:54.664185+0000	DEBUG	        router/connector.go:89	Adding external interface	{"interface": "2", "local_isd_as": "1-112", "local_addr": "10.0.1.12:51101", "remote_isd_as": "1-111", "remote_addr": "10.0.1.11:51101", "owned": true, "link_bfd_configured": false, "link_bfd_enabled": true, "dataplane_bfd_enabled": true}
+2026-03-08 22:08:54.664254+0000	DEBUG	       router/connector.go:147	Adding service	{"isd_as": "1-112", "svc": "DS", "address": "10.0.1.12:30254"}
+2026-03-08 22:08:54.664296+0000	DEBUG	       router/connector.go:147	Adding service	{"isd_as": "1-112", "svc": "CS", "address": "10.0.1.12:30254"}
+2026-03-08 22:08:54.664349+0000	DEBUG	       router/connector.go:245	Endhost port range configuration	{"startPort": 30000, "endPort": 32767}
+2026-03-08 22:08:54.664373+0000	DEBUG	          control/iactx.go:119	Dataplane configured successfully	{"config": "{IA: 1-112, BR.Name: br-1"}
+2026-03-08 22:08:54.674204+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30401"}
+2026-03-08 22:08:54.842172+0000	DEBUG	       router/dataplane.go:678	Initialize packet pool of size	{"poolSize": 3459}
+2026-03-08 22:08:54.954484+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 0}
+2026-03-08 22:08:54.954632+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 2}
+2026-03-08 22:08:54.954797+0000	DEBUG	       router/dataplane.go:872	Initialize slow-path processor with	{"id": 0}
+2026-03-08 22:08:54.954623+0000	DEBUG	       router/dataplane.go:815	Initialize processor with	{"id": 0}
+2026-03-08 22:08:54.954834+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 1}
+2026-03-08 22:08:54.954764+0000	DEBUG	       router/dataplane.go:815	Initialize processor with	{"id": 1}
+2026-03-08 22:08:54.954907+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 1}
+2026-03-08 22:08:54.955237+0000	DEBUG	       router/dataplane.go:709	Run receiver for	{"interface": 2}
+2026-03-08 22:08:54.955490+0000	DEBUG	      router/dataplane.go:1036	Initialize forwarder for	{"interface": 0}
+2026-03-08 22:08:55.267462+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:55.268077+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:55.492798+0000	DEBUG	            bfd/session.go:231	Bootstrapped
+2026-03-08 22:08:55.492878+0000	DEBUG	            bfd/session.go:437	Transitioned from state Down to state Init on event Down
+2026-03-08 22:08:55.659419+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:08:55.811450+0000	DEBUG	      router/dataplane.go:1775	SCMP response	{"cause": "bfd session down"}
+2026-03-08 22:08:55.811552+0000	DEBUG	      router/dataplane.go:2597	scmp	{"typecode": "ExternalInterfaceDown"}
+2026-03-08 22:08:55.874427+0000	DEBUG	            bfd/session.go:437	Transitioned from state Init to state Up on event Up
+2026-03-08 22:09:03.715959+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 1, "err": "read udp 10.0.1.12:51100: recvmmsg: connection refused"}
+2026-03-08 22:09:03.904558+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 1, "err": "read udp 10.0.1.12:51100: recvmmsg: connection refused"}
+2026-03-08 22:09:03.984293+0000	DEBUG	            bfd/session.go:437	Transitioned from state Up to state Down on event Timer
+2026-03-08 22:09:04.085001+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 1, "err": "read udp 10.0.1.12:51100: recvmmsg: connection refused"}
+2026-03-08 22:09:04.561983+0000	DEBUG	       router/dataplane.go:772	Error while reading batch	{"interfaceID": 2, "err": "read udp 10.0.1.12:51101: recvmmsg: connection refused"}

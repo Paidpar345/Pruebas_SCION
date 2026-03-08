@@ -1,0 +1,22 @@
+isd = 4
+description = "Initial TRC for ISD 4"
+serial_version = 1
+base_version = 1
+grace_period = "0s"
+voting_quorum = 2
+
+core_ases = [410, 411]
+authoritative_ases = [410, 411]
+
+cert_files = [
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/410/root/cp-root.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/411/root/cp-root.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/410/voting/regular-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/411/voting/regular-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/410/voting/sensitive-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD4/411/voting/sensitive-voting.pem"
+]
+
+[validity]
+not_before = 2026-03-08T19:46:56Z
+not_after = 2027-03-08T20:46:56Z

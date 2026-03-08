@@ -1,0 +1,15 @@
+[dispatcher]
+id = "dispatcher"
+local_udp_forwarding = true
+# socket_file_mode = "0777"
+
+[metrics]
+prometheus = "[127.0.0.1]:30441"
+
+[log.console]
+level = "debug"
+
+# Support Single host ASes
+[dispatcher.service_addresses]
+"1-112,CS" = "127.0.0.1:30254"
+"1-112,DS" = "127.0.0.1:30254"

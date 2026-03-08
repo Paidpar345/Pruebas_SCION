@@ -1,0 +1,9 @@
+[general]
+config_dir = "/root/escenario/ISD3/AS312/config/"
+id = "br-1"
+
+[metrics]
+prometheus = "127.0.0.1:30401"
+
+[log.console]
+level = "debug"

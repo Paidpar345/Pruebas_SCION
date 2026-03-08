@@ -1,0 +1,15 @@
+[general]
+id = "sd"
+config_dir = "/root/escenario/ISD1/HostB/config/"
+
+[metrics]
+prometheus = "127.0.0.1:30455"
+
+[path_db]
+connection = "/root/escenario/ISD1/HostB/config/database/sd.path.db"
+
+[trust_db]
+connection = "/root/escenario/ISD1/HostB/config/database/sd.trust.db"
+
+[log.console]
+level = "debug"

@@ -1,0 +1,22 @@
+isd = 3
+description = "Initial TRC for ISD 3"
+serial_version = 1
+base_version = 1
+grace_period = "0s"
+voting_quorum = 2
+
+core_ases = [310, 311]
+authoritative_ases = [310, 311]
+
+cert_files = [
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/310/root/cp-root.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/311/root/cp-root.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/310/voting/regular-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/311/voting/regular-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/310/voting/sensitive-voting.pem",
+  "/home/alonso/Escritorio/scion-orchestrator/escenario/pki/ISD3/311/voting/sensitive-voting.pem"
+]
+
+[validity]
+not_before = 2026-03-08T19:46:56Z
+not_after = 2027-03-08T20:46:56Z
