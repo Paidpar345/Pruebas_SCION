@@ -1,20 +1,20 @@
-2026-03-08 22:08:51.612828+0000	INFO	             env/logging.go:42	=====================> Service started SCION Daemon sd
+2026-03-10 11:03:31.800765+0000	INFO	             env/logging.go:42	=====================> Service started SCION Daemon sd
   Scion version: 
 
-  pid:           21
+  pid:           37
   euid/egid:     0 0
   cmd line:      ["bin/daemon" "--config" "/root/escenario/ISD2/HostA/config/tmp/sciond-tmp.toml"]
 
-2026-03-08 22:08:51.620577+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "authoritative"}
-2026-03-08 22:08:51.620622+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "issuing"}
-2026-03-08 22:08:51.620631+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "voting"}
-2026-03-08 22:08:51.620858+0000	INFO	        storage/storage.go:201	Connecting PathDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/HostA/config/database/sd.path.db"}
-2026-03-08 22:08:51.762565+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "a8cb2839", "task": "control_pathstorage_cleaner_cleaner"}
-2026-03-08 22:08:51.762649+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "f6b90493", "task": "sd_segments_cleaner"}
-2026-03-08 22:08:51.762702+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "5e71950a", "task": "sd_revocation_cleaner"}
-2026-03-08 22:08:51.762716+0000	INFO	        storage/storage.go:244	Connecting TrustDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/HostA/config/database/sd.trust.db"}
-2026-03-08 22:08:52.147058+0000	INFO	           daemon/daemon.go:67	TRCs loaded	{"files": []}
-2026-03-08 22:08:52.212740+0000	DEBUG	           daemon/daemon.go:70	Ignoring existing TRC	{"file": "/root/escenario/ISD2/HostA/config/certs/ISD2-B1-S1.trc"}
-2026-03-08 22:08:52.212824+0000	INFO	           daemon/daemon.go:81	Certificate chains loaded	{"files": []}
-2026-03-08 22:08:52.212975+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "8cd66d62", "task": "daemon_trc_loader"}
-2026-03-08 22:08:52.261055+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30455"}
+2026-03-10 11:03:31.859399+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "authoritative"}
+2026-03-10 11:03:31.860384+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "issuing"}
+2026-03-10 11:03:31.861773+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "voting"}
+2026-03-10 11:03:31.863425+0000	INFO	        storage/storage.go:201	Connecting PathDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/HostA/config/database/sd.path.db"}
+2026-03-10 11:03:31.993341+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "47babfb1", "task": "control_pathstorage_cleaner_cleaner"}
+2026-03-10 11:03:31.993787+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "6fdcae49", "task": "sd_segments_cleaner"}
+2026-03-10 11:03:31.994596+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "ec8c44ba", "task": "sd_revocation_cleaner"}
+2026-03-10 11:03:31.995437+0000	INFO	        storage/storage.go:244	Connecting TrustDB	{"backend": "sqlite", "connection": "/root/escenario/ISD2/HostA/config/database/sd.trust.db"}
+2026-03-10 11:03:32.193309+0000	INFO	           daemon/daemon.go:67	TRCs loaded	{"files": []}
+2026-03-10 11:03:32.194754+0000	DEBUG	           daemon/daemon.go:70	Ignoring existing TRC	{"file": "/root/escenario/ISD2/HostA/config/certs/ISD2-B1-S1.trc"}
+2026-03-10 11:03:32.223257+0000	INFO	           daemon/daemon.go:81	Certificate chains loaded	{"files": []}
+2026-03-10 11:03:32.225441+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "3ee9c298", "task": "daemon_trc_loader"}
+2026-03-10 11:03:32.234157+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30455"}

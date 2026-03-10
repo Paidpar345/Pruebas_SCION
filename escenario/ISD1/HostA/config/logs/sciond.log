@@ -1,25 +1,25 @@
-2026-03-08 22:08:42.605843+0000	INFO	             env/logging.go:42	=====================> Service started SCION Daemon sd
+2026-03-10 11:08:25.972751+0000	INFO	             env/logging.go:42	=====================> Service started SCION Daemon sd
   Scion version: 
 
-  pid:           22
+  pid:           24
   euid/egid:     0 0
   cmd line:      ["bin/daemon" "--config" "/root/escenario/ISD1/HostA/config/tmp/sciond-tmp.toml"]
 
-2026-03-08 22:08:42.615059+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "authoritative"}
-2026-03-08 22:08:42.618757+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "issuing"}
-2026-03-08 22:08:42.618800+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "voting"}
-2026-03-08 22:08:42.618969+0000	INFO	        storage/storage.go:201	Connecting PathDB	{"backend": "sqlite", "connection": "/root/escenario/ISD1/HostA/config/database/sd.path.db"}
-2026-03-08 22:08:42.856992+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "612846ba", "task": "control_pathstorage_cleaner_cleaner"}
-2026-03-08 22:08:42.858089+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "70ce919d", "task": "sd_segments_cleaner"}
-2026-03-08 22:08:42.858502+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "c0db6d21", "task": "sd_revocation_cleaner"}
-2026-03-08 22:08:42.858524+0000	INFO	        storage/storage.go:244	Connecting TrustDB	{"backend": "sqlite", "connection": "/root/escenario/ISD1/HostA/config/database/sd.trust.db"}
-2026-03-08 22:08:43.014415+0000	INFO	           daemon/daemon.go:67	TRCs loaded	{"files": []}
-2026-03-08 22:08:43.014471+0000	DEBUG	           daemon/daemon.go:70	Ignoring existing TRC	{"file": "/root/escenario/ISD1/HostA/config/certs/ISD1-B1-S1.trc"}
-2026-03-08 22:08:43.015124+0000	INFO	           daemon/daemon.go:81	Certificate chains loaded	{"files": []}
-2026-03-08 22:08:43.018975+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "9ec4da04", "task": "daemon_trc_loader"}
-2026-03-08 22:08:43.074437+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30455"}
-2026-03-08 21:55:27.804885+0000	DEBUG	        grpc/interceptor.go:74	Serving RPC	{"debug_id": "f7f5455a", "method": "/proto.daemon.v1.DaemonService/AS"}
-2026-03-08 21:55:27.814814+0000	DEBUG	        grpc/interceptor.go:74	Serving RPC	{"debug_id": "3c77ec61", "method": "/proto.daemon.v1.DaemonService/Paths"}
+2026-03-10 11:08:25.994511+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "authoritative"}
+2026-03-10 11:08:25.996602+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "issuing"}
+2026-03-10 11:08:25.998335+0000	INFO	               json/json.go:48	topology.json; ignoring deprecated attribute value	{"value": "voting"}
+2026-03-10 11:08:26.000607+0000	INFO	        storage/storage.go:201	Connecting PathDB	{"backend": "sqlite", "connection": "/root/escenario/ISD1/HostA/config/database/sd.path.db"}
+2026-03-10 11:08:26.456291+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "bae1cae5", "task": "control_pathstorage_cleaner_cleaner"}
+2026-03-10 11:08:26.456663+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "29d5a1f2", "task": "sd_segments_cleaner"}
+2026-03-10 11:08:26.457047+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "aaaf1758", "task": "sd_revocation_cleaner"}
+2026-03-10 11:08:26.466990+0000	INFO	        storage/storage.go:244	Connecting TrustDB	{"backend": "sqlite", "connection": "/root/escenario/ISD1/HostA/config/database/sd.trust.db"}
+2026-03-10 11:08:26.820949+0000	INFO	           daemon/daemon.go:67	TRCs loaded	{"files": []}
+2026-03-10 11:08:26.822954+0000	DEBUG	           daemon/daemon.go:70	Ignoring existing TRC	{"file": "/root/escenario/ISD1/HostA/config/certs/ISD1-B1-S1.trc"}
+2026-03-10 11:08:26.851072+0000	INFO	           daemon/daemon.go:81	Certificate chains loaded	{"files": []}
+2026-03-10 11:08:26.852654+0000	INFO	      periodic/periodic.go:133	Starting periodic task	{"debug_id": "778dc7b3", "task": "daemon_trc_loader"}
+2026-03-10 11:08:26.854839+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "127.0.0.1:30455"}
+2026-03-10 10:37:40.490216+0000	INFO	         cleaner/cleaner.go:72	Deleted expired	{"debug_id": "86aef69f", "subsystem": "control_pathstorage_cleaner", "count": 1}
+1:55:27.814814+0000	DEBUG	        grpc/interceptor.go:74	Serving RPC	{"debug_id": "3c77ec61", "method": "/proto.daemon.v1.DaemonService/Paths"}
 2026-03-08 21:55:27.867794+0000	DEBUG	        grpc/interceptor.go:41	Outgoing RPC	{"debug_id": "e2688366", "method": "/proto.control_plane.v1.SegmentLookupService/Segments", "target": "svc:///CS"}
 2026-03-08 21:55:27.868005+0000	DEBUG	        grpc/interceptor.go:41	Outgoing RPC	{"debug_id": "5e441f52", "method": "/proto.control_plane.v1.SegmentLookupService/Segments", "target": "svc:///CS"}
 2026-03-08 21:55:28.075861+0000	DEBUG	trust/fetching_provider.go:180	TRC notify	{"debug_id": "3c77ec61", "id": "ISD1-B1-S1"}

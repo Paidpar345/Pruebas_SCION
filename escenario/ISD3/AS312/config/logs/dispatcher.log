@@ -1,12 +1,12 @@
-2026-03-08 22:08:41.899109+0000	INFO	        launcher/network.go:43	Waiting for network to be ready	{"ips": ["127.0.0.1"]}
-2026-03-08 22:08:41.900985+0000	INFO	        launcher/network.go:47	Network ready
-2026-03-08 22:08:41.901031+0000	INFO	             env/logging.go:42	=====================> Service started SCION Dispatcher dispatcher
+2026-03-10 11:14:46.444114+0000	INFO	        launcher/network.go:43	Waiting for network to be ready	{"ips": ["127.0.0.1"]}
+2026-03-10 11:14:46.445416+0000	INFO	        launcher/network.go:47	Network ready
+2026-03-10 11:14:46.449025+0000	INFO	             env/logging.go:42	=====================> Service started SCION Dispatcher dispatcher
   Scion version: 
 
-  pid:           24
+  pid:           25
   euid/egid:     0 0
   cmd line:      ["bin/dispatcher" "--config" "/root/escenario/ISD3/AS312/config/tmp/dispatcher-tmp.toml"]
 
-2026-03-08 22:08:41.909032+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "[127.0.0.1]:30441"}
-2026-03-08 22:08:41.901485+0000	DEBUG	        dispatcher/main.go:142	Dispatcher starting	{"localAddr": "[::]:30041", "dispatcher feature": true}
-2026-03-08 22:08:41.911113+0000	DEBUG	  dispatcher/dispatcher.go:487	local address: [::]:30041
+2026-03-10 11:14:46.450673+0000	DEBUG	        dispatcher/main.go:142	Dispatcher starting	{"localAddr": "[::]:30041", "dispatcher feature": true}
+2026-03-10 11:14:46.454288+0000	DEBUG	  dispatcher/dispatcher.go:487	local address: [::]:30041
+2026-03-10 11:14:46.474707+0000	INFO	                env/env.go:201	Exporting prometheus metrics	{"addr": "[127.0.0.1]:30441"}
