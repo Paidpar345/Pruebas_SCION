@@ -1,0 +1,14 @@
+[command]
+service = "1-110"
+isd_as = "1-110"
+mode = "as"
+
+[metrics]
+prometheus = "127.0.0.1:33401"
+
+[bootstrap]
+server = "10.0.1.10:8041"
+
+[ca]
+server = 3000
+clients = ["123=config/client1.secret"]

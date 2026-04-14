@@ -1,0 +1,374 @@
+version: "3.4"
+services:
+  isd1_as110:
+    image: ubuntu:22.10
+    container_name: isd1_as110
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/AS110 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.10
+
+  isd1_as111:
+    image: ubuntu:22.10
+    container_name: isd1_as111
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/AS111 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.11
+
+  isd2_as210:
+    image: ubuntu:22.10
+    container_name: isd2_as210
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/AS210 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.10
+
+  isd2_as211:
+    image: ubuntu:22.10
+    container_name: isd2_as211
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/AS211 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.11
+
+  isd3_as310:
+    image: ubuntu:22.10
+    container_name: isd3_as310
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/AS310 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.10
+
+  isd3_as311:
+    image: ubuntu:22.10
+    container_name: isd3_as311
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/AS311 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.11
+
+  isd4_as410:
+    image: ubuntu:22.10
+    container_name: isd4_as410
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/AS410 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.10
+
+  isd4_as411:
+    image: ubuntu:22.10
+    container_name: isd4_as411
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/AS411 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.11
+
+  isd1_as112:
+    image: ubuntu:22.10
+    container_name: isd1_as112
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/AS112 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.12
+
+  isd1_as113:
+    image: ubuntu:22.10
+    container_name: isd1_as113
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/AS113 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.13
+
+  isd1_as114:
+    image: ubuntu:22.10
+    container_name: isd1_as114
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/AS114 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.14
+
+  isd2_as212:
+    image: ubuntu:22.10
+    container_name: isd2_as212
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/AS212 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.12
+
+  isd2_as213:
+    image: ubuntu:22.10
+    container_name: isd2_as213
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/AS213 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.13
+
+  isd2_as214:
+    image: ubuntu:22.10
+    container_name: isd2_as214
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/AS214 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.14
+
+  isd3_as312:
+    image: ubuntu:22.10
+    container_name: isd3_as312
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/AS312 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.12
+
+  isd3_as313:
+    image: ubuntu:22.10
+    container_name: isd3_as313
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/AS313 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.13
+
+  isd3_as314:
+    image: ubuntu:22.10
+    container_name: isd3_as314
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/AS314 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.14
+
+  isd4_as412:
+    image: ubuntu:22.10
+    container_name: isd4_as412
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/AS412 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.12
+
+  isd4_as413:
+    image: ubuntu:22.10
+    container_name: isd4_as413
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/AS413 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.13
+
+  isd4_as414:
+    image: ubuntu:22.10
+    container_name: isd4_as414
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/AS414 && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.14
+
+  isd1_hosta:
+    image: ubuntu:22.10
+    container_name: isd1_hosta
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/HostA && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.20
+
+  isd1_hostb:
+    image: ubuntu:22.10
+    container_name: isd1_hostb
+    command: ["bash", "-lc", "cd /root/escenario/ISD1/HostB && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.1.21
+
+  isd2_hosta:
+    image: ubuntu:22.10
+    container_name: isd2_hosta
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/HostA && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.20
+
+  isd2_hostb:
+    image: ubuntu:22.10
+    container_name: isd2_hostb
+    command: ["bash", "-lc", "cd /root/escenario/ISD2/HostB && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.2.21
+
+  isd3_hosta:
+    image: ubuntu:22.10
+    container_name: isd3_hosta
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/HostA && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.20
+
+  isd3_hostb:
+    image: ubuntu:22.10
+    container_name: isd3_hostb
+    command: ["bash", "-lc", "cd /root/escenario/ISD3/HostB && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.3.21
+
+  isd4_hosta:
+    image: ubuntu:22.10
+    container_name: isd4_hosta
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/HostA && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.20
+
+  isd4_hostb:
+    image: ubuntu:22.10
+    container_name: isd4_hostb
+    command: ["bash", "-lc", "cd /root/escenario/ISD4/HostB && ./run.sh"]
+    cap_add:
+      - ALL
+    privileged: true
+    volumes:
+      - /home/alonso/Escritorio/scion-orchestrator/escenario/escenario:/root/escenario
+    networks:
+      scionnet:
+        ipv4_address: 10.0.4.21
+
+networks:
+  scionnet:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: "1500"
+    ipam:
+      config:
+        - subnet: 10.0.0.0/16

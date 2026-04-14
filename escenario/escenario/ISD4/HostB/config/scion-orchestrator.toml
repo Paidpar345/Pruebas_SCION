@@ -1,0 +1,13 @@
+[command]
+service = "4-411"
+isd_as = "4-411"
+mode = "endhost"
+
+[metrics]
+server = "127.0.0.1:33401"
+
+[bootstrap]
+server = "10.0.4.11:8041"
+
+[network]
+allowed_subnets = ["0.0.0.0/0"]

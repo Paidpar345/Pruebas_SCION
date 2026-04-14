@@ -1,0 +1,13 @@
+[command]
+service = "1-110"
+isd_as = "1-110"
+mode = "endhost"
+
+[metrics]
+server = "127.0.0.1:33401"
+
+[bootstrap]
+server = "10.0.1.10:8041"
+
+[network]
+allowed_subnets = ["0.0.0.0/0"]

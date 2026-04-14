@@ -1,0 +1,118 @@
+{
+  "attributes": ["authoritative", "issuing", "voting", "core"],
+  "isd_as": "1-111",
+  "mtu": 1500,
+  "control_service": {
+    "cs-1": { "addr": "10.0.1.11:30254" }
+  },
+  "discovery_service": {
+    "cs-1": { "addr": "10.0.1.11:30254" }
+  },
+  "border_routers": {
+    "br-1": {
+      "internal_addr": "10.0.1.11:30001",
+      "interfaces": {
+        "1": {
+          "underlay": {
+            "public": "10.0.1.11:50000",
+            "remote": "10.0.1.10:50000"
+          },
+          "isd_as": "1-110",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "2": {
+          "underlay": {
+            "public": "10.0.1.11:50007",
+            "remote": "10.0.2.10:50007"
+          },
+          "isd_as": "2-210",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "3": {
+          "underlay": {
+            "public": "10.0.1.11:50008",
+            "remote": "10.0.2.11:50008"
+          },
+          "isd_as": "2-211",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "4": {
+          "underlay": {
+            "public": "10.0.1.11:50009",
+            "remote": "10.0.3.10:50009"
+          },
+          "isd_as": "3-310",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "5": {
+          "underlay": {
+            "public": "10.0.1.11:50010",
+            "remote": "10.0.3.11:50010"
+          },
+          "isd_as": "3-311",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "6": {
+          "underlay": {
+            "public": "10.0.1.11:50011",
+            "remote": "10.0.4.10:50011"
+          },
+          "isd_as": "4-410",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "7": {
+          "underlay": {
+            "public": "10.0.1.11:50012",
+            "remote": "10.0.4.11:50012"
+          },
+          "isd_as": "4-411",
+          "link_to": "CORE",
+          "mtu": 1500
+        }
+,
+        "8": {
+          "underlay": {
+            "public": "10.0.1.11:51101",
+            "remote": "10.0.1.12:51101"
+          },
+          "isd_as": "1-112",
+          "link_to": "CHILD",
+          "mtu": 1500
+        }
+,
+        "9": {
+          "underlay": {
+            "public": "10.0.1.11:51111",
+            "remote": "10.0.1.13:51111"
+          },
+          "isd_as": "1-113",
+          "link_to": "CHILD",
+          "mtu": 1500
+        }
+,
+        "10": {
+          "underlay": {
+            "public": "10.0.1.11:51121",
+            "remote": "10.0.1.14:51121"
+          },
+          "isd_as": "1-114",
+          "link_to": "CHILD",
+          "mtu": 1500
+        }
+      },
+      "dispatched_ports": "30000-32767"
+    }
+  }
+}

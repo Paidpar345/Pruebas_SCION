@@ -1,0 +1,10 @@
+[command]
+service = "3-313"
+isd_as = "3-313"
+mode = "as"
+
+[metrics]
+prometheus = "127.0.0.1:33401"
+
+[bootstrap]
+server = "10.0.3.10:8041"

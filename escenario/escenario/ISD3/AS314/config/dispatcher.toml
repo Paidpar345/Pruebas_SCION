@@ -1,0 +1,17 @@
+[general]
+config_dir = "{configDir}"
+
+[dispatcher]
+id = "dispatcher"
+local_udp_forwarding = true
+socket_file_mode = 0777
+
+[metrics]
+prometheus = "127.0.0.1:30441"
+
+[log.console]
+level = "debug"
+
+[dispatcher.service_addresses]
+"3-314,CS" = "127.0.0.1:30254"
+"3-314,DS" = "127.0.0.1:30254"
